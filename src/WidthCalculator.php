@@ -29,7 +29,7 @@ class WidthCalculator
         $pixelPrice = $predictedFileSize / $area;
 
         while (true) {
-            $predictedFileSize *= 0.7;
+            $predictedFileSize *= config('statamic.responsive-images.predicted_filesize', 0.7);
 
             $newWidth = (int) floor(sqrt(($predictedFileSize / $pixelPrice) / $ratio));
 
@@ -49,7 +49,7 @@ class WidthCalculator
 
     protected function finishedCalculating(int $predictedFileSize, int $newWidth): bool
     {
-        if ($newWidth < 20) {
+        if ($newWidth < config('statamic.responsive-images.min_srcset_width', 20)) {
             return true;
         }
 
