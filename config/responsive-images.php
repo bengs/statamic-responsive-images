@@ -118,4 +118,17 @@ return [
 
     'breakpoint_unit' => 'px',
 
+    /*
+    |--------------------------------------------------------------------------
+    | Srcset Width Calculation
+    |--------------------------------------------------------------------------
+    |
+    | The predicted file size reduction & min width used in the WidthCalculator
+    |
+    */
+
+    'predicted_filesize' => '0.7',
+    
+    'min_srcset_width' => ''
+
 ];
