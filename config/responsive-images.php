@@ -127,8 +127,8 @@ return [
     |
     */
 
-    'predicted_filesize' => '0.7',
+    'predicted_filesize' => 0.7,
     
-    'min_srcset_width' => ''
+    'min_srcset_width' => 20
 
 ];
