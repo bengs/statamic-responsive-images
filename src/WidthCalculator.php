@@ -47,7 +47,7 @@ class WidthCalculator
         }
     }
 
-    protected function finishedCalculating(int $predictedFileSize, int $newWidth): bool
+    protected function finishedCalculating(float $predictedFileSize, int $newWidth): bool
     {
         if ($newWidth < config('statamic.responsive-images.min_srcset_width', 20)) {
             return true;
