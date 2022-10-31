@@ -11,6 +11,7 @@ use Spatie\ResponsiveImages\GraphQL\ResponsiveField;
 use Spatie\ResponsiveImages\GraphQL\ResponsiveFieldType as GraphQLResponsiveFieldType;
 use Spatie\ResponsiveImages\Jobs\GenerateImageJob;
 use Spatie\ResponsiveImages\Listeners\GenerateResponsiveVersions;
+use Spatie\ResponsiveImages\Listeners\UpdateResponsiveReferences;
 use Spatie\ResponsiveImages\Tags\ResponsiveTag;
 use Statamic\Events\AssetUploaded;
 use Statamic\Facades\GraphQL;
@@ -40,6 +41,10 @@ class ServiceProvider extends AddonServiceProvider
         ],
     ];
 
+    protected $subscribe = [
+        UpdateResponsiveReferences::class,
+    ];
+
     protected $commands = [
         GenerateResponsiveVersionsCommand::class,
         RegenerateResponsiveVersionsCommand::class,
@@ -50,6 +55,7 @@ class ServiceProvider extends AddonServiceProvider
         parent::boot();
 
         $this
+            ->bootEvents()
             ->bootCommands()
             ->bootAddonViews()
             ->bootAddonConfig()
