@@ -2,6 +2,26 @@
 
 All notable changes to `statamic-responsive-images` will be documented in this file
 
+## v2.14.4 - 2022-11-09
+
+### What's Changed
+
+- Force `<img>` tag width & height parameters to an integer by @micahhenshaw in https://github.com/spatie/statamic-responsive-images/pull/180
+
+### New Contributors
+
+- @micahhenshaw made their first contribution in https://github.com/spatie/statamic-responsive-images/pull/180
+
+**Full Changelog**: https://github.com/spatie/statamic-responsive-images/compare/v2.14.3...v2.14.4
+
+## v2.14.3 - 2022-11-02
+
+### What's Changed
+
+- Control panel JS assets have been compiled for distribution with missing fixes from https://github.com/spatie/statamic-responsive-images/pull/156
+
+**Full Changelog**: https://github.com/spatie/statamic-responsive-images/compare/v2.14.2...v2.14.3
+
 ## v2.14.2 - 2022-10-16
 
 ### What's Changed
